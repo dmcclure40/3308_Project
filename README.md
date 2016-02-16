@@ -61,4 +61,4 @@ Requirement Number| Description | Size
 
 ##Methodology
 
-Waterfall at first for foundation, then switch to agile.
+We'll start using Waterfall, then once we have basic functionaloity we'll use Agile to implement our remaining requirements
