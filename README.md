@@ -33,7 +33,7 @@ This project would solve a problem that does not yet have an easy solution. User
 
 ###User Requirements###
 
-Requirement Number| Description|Size(hours)
+Requirement Number| Description|Size (hours)
 ---------|--------|------------
 1.0 | As a User, I want to pick up and move an object | 8
 2.0 | As a User, I want to be able to turn the device on and off | 1
@@ -42,7 +42,7 @@ Requirement Number| Description|Size(hours)
 
 ###Functional Requirements###
 
-Requirement Number| Description | Size
+Requirement Number| Description | Size (hours)
 ---------|--------|-----------
 1.0 | As a developer, the arm uses a Lead motion tracking device for input |
 2.0 | As a developer, Leap input should communicate with arm quickly |
