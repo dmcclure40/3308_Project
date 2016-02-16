@@ -35,20 +35,21 @@ This project would solve a problem that does not yet have an easy solution. User
 
 Requirement Number| Description|Size
 ---------|--------|------------
-1.0 | Intuitive and easy control |
-2.0 | Doesn’t need knowledge of inner workings |
-3.0 | Simple way to start and stop |
+1.0 | As a User, I want to pick up and move an object |
+2.0 | As a User, I want to be able to turn the device on and off |
+3.0 | As a User, I want to be able to pick up a variety of objects |
+4.0 | As a User, I want intuitive control so I don't need to learn new skills | 
 
 ###Functional Requirements###
 
 Requirement Number| Description | Size
 ---------|--------|-----------
-1.0 | Uses a motion tracking device for input |
-2.0 | Leap input should communicate with arm |
+1.0 | Uses a Lead motion tracking device for input |
+2.0 | Leap input should communicate with arm quickly |
 3.0 | The arm must have 3 joints |
-4.0 | The end must have a grabber of sorts |
-5.0 | Should be able to pick things up |
-6.0 | Should be able to rotate 360˚ |
+4.0 | The end must have a grabber / pincer|
+5.0 | Should be able to pick objects up |
+6.0 | Should be able to rotate on multiple axis |
 7.0 | Should be able to move each limb/joint individually |
 8.0 | Basic hand movements should translate to arm movements |
 
