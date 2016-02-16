@@ -21,14 +21,14 @@ Controlling an artificial limb in a natural way.
 This project would solve a problem that does not yet have an easy solution. Users will be able to control a non-natural robotic limb in a very natural way. This project could also be further developed and improved upon later in our college careers to do more and work better.
 
 ##Risks:
-*Being new to working with Raspberry Pi.
-*Timeline to finish working project may be too short.
-*Expenses for a robotic arm may be difficult to invest in.
+* Being new to working with Raspberry Pi.
+* Timeline to finish working project may be too short.
+* Expenses for a robotic arm may be difficult to invest in.
 
 ##Risk Mitigation Strategy:
-*Read up on and become familiar with Raspberry Pi.
-*Make sure we are communicating well and exchanging schedules.
-*Use inexpensive arm parts such as legos.
+* Read up on and become familiar with Raspberry Pi.
+* Make sure we are communicating well and exchanging schedules.
+* Use inexpensive arm parts such as legos.
 ##Requirements:
 
 ###User Requirements###
