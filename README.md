@@ -44,21 +44,21 @@ Requirement Number| Description|Size
 
 Requirement Number| Description | Size
 ---------|--------|-----------
-1.0 | Uses a Lead motion tracking device for input |
-2.0 | Leap input should communicate with arm quickly |
-3.0 | The arm must have 3 joints |
-4.0 | The end must have a grabber / pincer|
-5.0 | Should be able to pick objects up |
-6.0 | Should be able to rotate on multiple axis |
-7.0 | Should be able to move each limb/joint individually |
-8.0 | Basic hand movements should translate to arm movements |
+1.0 | As a developer, the arm uses a Lead motion tracking device for input |
+2.0 | As a developer, Leap input should communicate with arm quickly |
+3.0 | As a developer, the arm must have 3 joints |
+4.0 | As a developer, the end must have a grabber / pincer|
+5.0 | As a developer, the arm should be able to pick objects up |
+6.0 | As a developer, the arm should be able to rotate on multiple axis |
+7.0 | As a developer, each limb/joint can move individually |
+8.0 | As a developer, basic hand movements should translate to arm movements |
 
 ###Non-Functional Requirements###
 
 Requirement Number| Description | Size
 ---------|--------|---------------
-1.0 | Fluid motions / non-abrupt |
-2.0 | Latency between input and arm must be short |
+1.0 | As a developer, the arm must have fluid, non abdrupt motions |
+2.0 | As a developer, latency between inputs and the arm must be short |
 
 ##Methodology
 
