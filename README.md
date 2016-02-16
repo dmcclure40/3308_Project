@@ -33,12 +33,12 @@ This project would solve a problem that does not yet have an easy solution. User
 
 ###User Requirements###
 
-Requirement Number| Description|Size
+Requirement Number| Description|Size(hours)
 ---------|--------|------------
-1.0 | As a User, I want to pick up and move an object |
-2.0 | As a User, I want to be able to turn the device on and off |
-3.0 | As a User, I want to be able to pick up a variety of objects |
-4.0 | As a User, I want intuitive control so I don't need to learn new skills | 
+1.0 | As a User, I want to pick up and move an object | 8
+2.0 | As a User, I want to be able to turn the device on and off | 1
+3.0 | As a User, I want to be able to pick up a variety of objects | 8
+4.0 | As a User, I want intuitive control so I don't need to learn new skills | 5
 
 ###Functional Requirements###
 
