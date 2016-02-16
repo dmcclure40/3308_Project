@@ -1,4 +1,4 @@
-# 3308_Project
+# LeapArm
 Group project for CSCI 3308
 
 ##Team Members:
