@@ -58,9 +58,13 @@ Requirement Number| Description | Size (hours)
 
 Requirement Number| Description | Size (hours)
 ---------|--------|---------------
-1.0 | As a developer, the arm must have fluid, non abdrupt motions | 4
+1.0 | As a developer, the arm must have fluid, non-abrupt motions | 4
 2.0 | As a developer, latency between inputs and the arm must be short | 7
 
 ##Methodology
 
 We'll start using Waterfall, then once we have basic functionaloity we'll use Agile to implement our remaining requirements
+
+##Project Plan:
+
+![leaparm](https://cloud.githubusercontent.com/assets/3279958/13099364/79832088-d4ee-11e5-8a92-9ff2ca5b5d4a.JPG)
