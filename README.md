@@ -29,6 +29,7 @@ This project would solve a problem that does not yet have an easy solution. User
 * Read up on and become familiar with Raspberry Pi.
 * Make sure we are communicating well and exchanging schedules.
 * Use inexpensive arm parts such as legos.
+
 ##Requirements:
 
 ###User Requirements###
@@ -55,7 +56,7 @@ Requirement Number| Description | Size (hours)
 
 ###Non-Functional Requirements###
 
-Requirement Number| Description | Size
+Requirement Number| Description | Size (hours)
 ---------|--------|---------------
 1.0 | As a developer, the arm must have fluid, non abdrupt motions | 4
 2.0 | As a developer, latency between inputs and the arm must be short | 7
