@@ -29,6 +29,7 @@ This project would solve a problem that does not yet have an easy solution. User
 * Read up on and become familiar with Raspberry Pi.
 * Make sure we are communicating well and exchanging schedules.
 * Use inexpensive arm parts such as legos.
+* Leap Motion has provided a lot of documentation on how to use their device for projects: https://developer.leapmotion.com/documentation/python/index.html
 
 ##Requirements:
 
