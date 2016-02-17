@@ -50,7 +50,7 @@ Requirement Number| Description | Size (hours)
 3.0 | As a developer, the arm must have 3 joints | 2
 4.0 | As a developer, the end must have a grabber / pincer| 2
 5.0 | As a developer, the arm should be able to pick objects up | 7
-6.0 | As a developer, the arm should be able to rotate on multiple axis | 6
+6.0 | As a developer, the arm should be able to rotate on 3 axis | 6
 7.0 | As a developer, each limb/joint can move individually | 5
 8.0 | As a developer, basic hand movements should translate to arm movements | 8
 
