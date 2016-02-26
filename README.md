@@ -10,7 +10,7 @@ Group project for CSCI 3308
 
 ##Description:
 
-The Leap Motion controlled Robotic Arm will use the movements of a user's hand to move a robotic arm. The Leap motion detects hand movements in all directions that will be mapped to the three axis that a robotic arm will move. A Raspberry Pi will be used as the medium between the input device as the Leap Motion and the output device as the Arm. This could potentially be used for precise movements for people that do not have the strength, or ability to perform a task using their own arm. 
+The Leap Motion controlled Robotic Arm will use the movements of a user's hand to move a vrep simulated robotic arm. The Leap motion detects hand movements in all directions that will be mapped to the three axis that a robotic arm will move. The controller and simulation software will connect through a python script. This could potentially be used for precise movements for people that do not have the strength, or ability to perform a task using their own arm. 
 
 ##Vision Statement:
 
@@ -21,14 +21,13 @@ Controlling an artificial limb in a natural way.
 This project would solve a problem that does not yet have an easy solution. Users will be able to control a non-natural robotic limb in a very natural way. This project could also be further developed and improved upon later in our college careers to do more and work better.
 
 ##Risks:
-* Being new to working with Raspberry Pi.
+* Being new to working with vrep.
 * Timeline to finish working project may be too short.
-* Expenses for a robotic arm may be difficult to invest in.
+* Difficulty understanding how to map Leap Motion movements to robotic movements.
 
 ##Risk Mitigation Strategy:
-* Read up on and become familiar with Raspberry Pi.
+* Read up on and become familiar with vrep. 
 * Make sure we are communicating well and exchanging schedules.
-* Use inexpensive arm parts such as legos.
 * Leap Motion has provided a lot of documentation on how to use their device for projects: https://developer.leapmotion.com/documentation/python/index.html
 
 ##Requirements:
@@ -46,12 +45,12 @@ Requirement Number| Description|Size (hours)
 
 Requirement Number| Description | Size (hours)
 ---------|--------|-----------
-1.0 | As a developer, the arm uses a Lead motion tracking device for input | 4
+1.0 | As a developer, the simulated arm uses a Lead motion tracking device for input | 4
 2.0 | As a developer, Leap input should communicate with arm quickly | 5
-3.0 | As a developer, the arm must have 3 joints | 2
+3.0 | As a developer, the arm must have 3 points of movement (3 servo motors) | 2
 4.0 | As a developer, the end must have a grabber / pincer| 2
 5.0 | As a developer, the arm should be able to pick objects up | 7
-6.0 | As a developer, the arm should be able to rotate on 3 axis | 6
+6.0 | As a developer, the arm should be able to move in 3 axis | 6
 7.0 | As a developer, each limb/joint can move individually | 5
 8.0 | As a developer, basic hand movements should translate to arm movements | 8
 
