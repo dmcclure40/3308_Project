@@ -21,16 +21,21 @@ class Listener(Leap.Listener):
     def on_frame(self, controller): # Get the most recent frame and report some basic information
         frame = controller.frame()
 
-        print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d, tools: %d, gestures: %d" % (
-              frame.id, frame.timestamp, len(frame.hands), len(frame.fingers), len(frame.tools), len(frame.gestures()))
+        print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
+              frame.id, frame.timestamp, len(frame.hands), len(frame.fingers.extended()))
 
         # Get hands
         for hand in frame.hands:
 
             handType = "Left hand" if hand.is_left else "Right hand"
 
-            print "  %s, (x, y, z): %s" % (
-                handType, hand.palm_position) # Show Left/Right hand and x,y,z position for each frame
+            if (len(frame.fingers.extended()) == 0):
+                gripper = "closed"
+            else:
+                gripper = "open"
+
+            print "  %s, gripper: %s, (x, y, z): %s" % (
+                handType, gripper, hand.palm_position) # Show Left/Right hand and x,y,z position for each frame
 
             # Get the hand's normal vector and direction
             normal = hand.palm_normal
