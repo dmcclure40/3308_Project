@@ -23,7 +23,8 @@ class Listener(Leap.Listener):
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers.extended()))
-
+    def on_device_change(self, controller):
+	print "Device change"
         # Get hands
         for hand in frame.hands:
 
