@@ -23,11 +23,6 @@ class Listener(Leap.Listener):
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers.extended()))
-    def on_device_change(self, controller):
-	print "Device change"
-
-    def on_device_failure(self, controller):
-	print "Device failed"
 
         # Get hands
         for hand in frame.hands:
@@ -45,6 +40,11 @@ class Listener(Leap.Listener):
             # Get the hand's normal vector and direction
             normal = hand.palm_normal
             direction = hand.direction
+    def on_device_change(self, controller):
+	       print "Device change"
+
+    def on_device_failure(self, controller):
+	       print "Device failed"
 
 def main():
     # Create a listener and controller
