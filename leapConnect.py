@@ -34,13 +34,19 @@ class Listener(Leap.Listener):
             else:
                 gripper = "open"
 
-            print "  %s, gripper: %s, (x, y, z): %s" % (
-                handType, gripper, hand.palm_position) # Show Left/Right hand and x,y,z position for each frame
+            x = hand.palm_position[0]
+            y = hand.palm_position[1]
+            z = hand.palm_position[2]
+
+            normal = hand.palm_normal
+
+            print "  %s, gripper: %s, Position: (%s, %s, %s), Normal Vector: %s" % (
+                handType, gripper, x, y, z, normal) # Show Left/Right hand and x,y,z position for each frame
 
             # Get the hand's normal vector and direction
             normal = hand.palm_normal
             direction = hand.direction
-    def on_device_change(self, controller):
+    def on_device_change(self, controller):\
 	       print "Device change"
 
     def on_device_failure(self, controller):
