@@ -46,7 +46,7 @@ class Listener(Leap.Listener):
             # Get the hand's normal vector and direction
             normal = hand.palm_normal
             direction = hand.direction
-    def on_device_change(self, controller):\
+    def on_device_change(self, controller):
 	       print "Device change"
 
     def on_device_failure(self, controller):
