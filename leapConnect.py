@@ -35,19 +35,23 @@ class Listener(Leap.Listener):
                 gripper = "closed"
             else:
                 gripper = "open"
-
+            
+            #we can replace with code above. Returns between 0 and 1 to signify if closed or not, could be helpful.
+	    strength = hand.grab_strength #strength=0 for open, 1 for closed
+	    if (strength==0):
+	    	grip="open"
+	    else
+	    	grip= "closed"
+	    
             x = hand.palm_position[0]
             y = hand.palm_position[1]
             z = hand.palm_position[2]
 
             normal = hand.palm_normal
+	    direction = hand.direction
 	    
             print "  %s, gripper: %s, Position: (%s, %s, %s), Normal Vector: %s" % (
                 handType, gripper, x, y, z, normal) # Show Left/Right hand and x,y,z position for each frame
-                
-            # Get the hand's normal vector and direction
-            normal = hand.palm_normal
-            direction = hand.direction
             
             #pitch=rotation around x-axis
 	    #yaw=rotation around y-axis
@@ -60,7 +64,7 @@ class Listener(Leap.Listener):
     def on_device_failure(self, controller):
 	       print "Device failed"
 	       
-    gesture_list = frame.gestures(start_frame)
+    
     for gesture in frame.gestures();
     	if gesture.type==Leap.Gesture.TYPE_CIRCLE
     		circle=CircleGesture(gesture)
