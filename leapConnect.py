@@ -5,7 +5,7 @@
 # To run type 'python leapConnect.py' into the terminal. (I think for windows you'll need to download a terminal emulator)
 
 import os, sys, inspect, thread, time, Leap
-from leap import CircleGesture
+from Leap import CircleGesture
 class Listener(Leap.Listener):
     state_names=['STATE_INVALID', 'STATE_START', 'STATE_UPDATE', 'STATE_END']
 
@@ -27,6 +27,7 @@ class Listener(Leap.Listener):
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers.extended()))
 
         # Get hands
+
         for hand in frame.hands:
 
             handType = "Left hand" if hand.is_left else "Right hand"
@@ -35,50 +36,51 @@ class Listener(Leap.Listener):
                 gripper = "closed"
             else:
                 gripper = "open"
-            
+
             #we can replace with code above. Returns between 0 and 1 to signify if closed or not, could be helpful.
-	    strength = hand.grab_strength #strength=0 for open, 1 for closed
-	    if (strength==0):
-	    	grip="open"
-	    else
-	    	grip= "closed"
-	    
+            strength = hand.grab_strength #strength=0 for open, 1 for closed
+
+            if (strength==0):
+                grip="open"
+            else:
+                grip= "closed"
+
             x = hand.palm_position[0]
             y = hand.palm_position[1]
             z = hand.palm_position[2]
 
             normal = hand.palm_normal
-	    direction = hand.direction
-	    
-            print "  %s, gripper: %s, Position: (%s, %s, %s), Normal Vector: %s" % (
-                handType, gripper, x, y, z, normal) # Show Left/Right hand and x,y,z position for each frame
-            
+            direction = hand.direction
+
+            print "  %s, gripper: %s" %(handType, grip) # Show Left/Right hand and x,y,z position for each frame
+            print "X_Pos: " +str(x) + "\tY_Pos: " +str(y) + "\tZ_Pos: " +str(z)
+
             #pitch=rotation around x-axis
 	    #yaw=rotation around y-axis
 	    #roll=rotation around z-axis
-	    print "Pitch: " +str(direction.pitch*Leap.RAD_TO_DEG) + "Yaw: " +str(direction.yaw*Leap.RAD_TO_DEG) + "Roll: " +str(normal.roll*Leap.RAD_TO_DEG)
-	    
+            print "Pitch: " +str(direction.pitch*Leap.RAD_TO_DEG) + "\tYaw: " +str(direction.yaw*Leap.RAD_TO_DEG) + "\tRoll: " +str(normal.roll*Leap.RAD_TO_DEG)
+
+        for gesture in frame.gestures():
+        	if gesture.type==Leap.Gesture.TYPE_CIRCLE:
+        		circle=CircleGesture(gesture)
+        		if circle.pointable.direction.angle_to(circle.normal) <= Leap.PI/2:
+        			clock="clockwise"
+        		else:
+        			clock="counter-clockwise"
+        		swept_angle=0
+        		if circle.state != Leap.Gesture.STATE_START: #if state of circle isn't start state
+        		#calculate angle that has been swept out by drawing circle
+        		      previous= CircleGesture(controller.frame(1).gesture(circle.id))
+        		      swept_angle= (circle.progress - previous.progress) * 2 * Leap.PI
+        		print "ID: " + str(circle.id) + "Swept angle: " +str(swept_angle * Leap.RAD_TO_DEG) + " " + clock
+
+
     def on_device_change(self, controller):
 	       print "Device change"
 
     def on_device_failure(self, controller):
 	       print "Device failed"
-	       
-    
-    for gesture in frame.gestures();
-    	if gesture.type==Leap.Gesture.TYPE_CIRCLE
-    		circle=CircleGesture(gesture)
-    		if circle.pointable.direction.angle_to(circle.normal) <= Leap.PI/2:
-    			clock="clockwise"
-    		else:
-    			clock="counter-clockwise"
-    		swept_angle=0
-    		if circle.state != Leap.Gesture.STATE_START #if state of circle isn't start state
-    		#calculate angle that has been swept out by drawing circle
-    		previous= CircleGesture(controller.frame(1).gesture(circle.id))
-    		swept_angle= (cirle.progress - previous.progress) * 2 * Leap.PI
-    		print "ID: " + str(circle.id) + "Swept angle: " +str(swept_angle * Leap.RAD_TO_DEG) + " " + clock
-	        
+
 
 def main():
     # Create a listener and controller
