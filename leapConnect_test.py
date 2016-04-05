@@ -16,7 +16,7 @@ class LeapConnectTestCase(unittest.TestCase):
 	def setUp(self):
 		pass
 	
-	def tearDown(cls):
+	def tearDown(self):
 		pass
 	
 	def on_connect_test(self):
