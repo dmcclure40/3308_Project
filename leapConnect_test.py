@@ -20,7 +20,11 @@ class LeapConnectTestCase(unittest.TestCase):
 		pass
 	
 	def on_connect_test(self):
-		p=leapConnect.Listener(Leap.Listener)
+		listener=leapConnect.Listener()
+		controller=leapConnect.Leap.Controller()
+		p=controller.add_listener(listener)
 		self.assertEqual(p.on_connect,"Connected")
 if __name__== '__main__':
 	unittest.main()
+	
+
