@@ -8,11 +8,12 @@ public class GripperRight : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
-        GR = transform.position;
+        
     }
 	
 	
 	void Update () {
+        GR = transform.position;
         if (Input.GetKeyUp(KeyCode.Space))
         {
             if (gripperStatus == 0f)
