@@ -13,3 +13,14 @@ Group project for CSCI 3308
 Controlling an artificial limb in a natural way.
 
 ##Automated Tests:
+
+##User Acceptance Test Plans:
+![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/UAT01.png "UAT01")
+
+
+
+![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/UAT02.png "UAT02")
+
+
+
+![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/UAT03.png "UAT03")
