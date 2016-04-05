@@ -5,7 +5,7 @@ Group project for CSCI 3308
 * Adam Heaton - MonumentToAllYourSins
 * Davis McClure - dmcclure40
 * Nhi Nguyen - nhng5827
-* Nicky Schardt - Ninjahampster611
+* Nicky Schardt - Ninjahamster611
 * Tyler Lugger - tylu3495
 
 ##Vision Statement:
