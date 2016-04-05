@@ -5,9 +5,7 @@ public class JointScript : MonoBehaviour
 {
 
     public Rigidbody rb;
-
-    float force = 0.05f;
-    float NewForce = 0.9f;
+    public float RotateSpeed = 50f;
     // Use this for initialization
     void Start()
     {
@@ -17,30 +15,23 @@ public class JointScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-            MoveJointDown();
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            MoveJointUp();
-
-
-
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            MoveJointLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            MoveJointRight();
+        }
     }
 
-    void MoveJointDown()
+    void MoveJointLeft()
     {
-        print("a key was pressed");
-        NewForce -= force;
-        print("force = " + NewForce);
-        transform.position = new Vector3(transform.position.x, NewForce, transform.position.z);
-
+        transform.Rotate(-RotateSpeed * Time.deltaTime, 0f, 0f);
     }
 
-    void MoveJointUp()
+    void MoveJointRight()
     {
-        print("a key was pressed");
-        NewForce += force;
-        print("force = " + NewForce);
-        transform.position = new Vector3(transform.position.x, NewForce, transform.position.z);
-
+        transform.Rotate(RotateSpeed * Time.deltaTime, 0f, 0f);
     }
 }
