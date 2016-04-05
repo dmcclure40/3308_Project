@@ -4,9 +4,8 @@ using System.Collections;
 public class MoveArm : MonoBehaviour {
 
     public Rigidbody rb;
-
-    float force = 5f;
-    float NewForce = 0.85f;
+    public float RotateSpeed = 50f;
+    
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
@@ -15,29 +14,22 @@ public class MoveArm : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
             MoveArmDown();
+        }
         if (Input.GetKeyDown(KeyCode.UpArrow))
-            MoveArmUp(); 
-
-
-
+        {
+            MoveArmUp();
+        }
     }
 
     void MoveArmDown()
     {
-        print("a key was pressed");
-        //NewForce -= force;
-        print("force = " + NewForce);
-        transform.Rotate(Vector3.forward, -force * Time.deltaTime, Space.Self);
-
+        transform.Rotate(0f, 0f, RotateSpeed * Time.deltaTime);
     }
 
     void MoveArmUp()
     {
-        print("a key was pressed");
-        //NewForce += force;
-        print("force = " + NewForce);
-        transform.Rotate(Vector3.forward, force *Time.deltaTime, Space.Self);
-
+        transform.Rotate(0f, 0f, -RotateSpeed * Time.deltaTime);
     }
 }
