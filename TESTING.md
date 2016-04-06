@@ -13,6 +13,12 @@ Group project for CSCI 3308
 Controlling an artificial limb in a natural way.
 
 ##Automated Tests:
+How to run the automated test cases:
+* Find the directory where leapConnect_test.py is located and run "python leapConnect_test.py" from the command line.
+* Plug the Leap Motion USB into your computer. The first test will test whether the Leap Motion was successfully connected or not.
+* Unplug the Leap Motion to see the test case for when it is disconnected.
+* After plugging it back in, hit "Enter" on the keyboard to Exit the program.
+
 
 ##User Acceptance Test Plans:
 ![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/UAT01.png "UAT01")
