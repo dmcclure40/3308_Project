@@ -19,6 +19,9 @@ How to run the automated test cases:
 * Unplug the Leap Motion to see the test case for when it is disconnected.
 * After plugging it back in, hit "Enter" on the keyboard to Exit the program.
 
+Output from runnig automated test:
+
+![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/testingOutput.png "testingOutput")
 
 ##User Acceptance Test Plans:
 ![alt text](https://github.com/dmcclure40/3308_Project/blob/testing/UAT01.png "UAT01")
