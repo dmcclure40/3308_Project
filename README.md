@@ -10,8 +10,7 @@ Group project for CSCI 3308
 
 ##Description:
 
-The Leap Motion controlled Robotic Arm will use the movements of a user's hand to move a vrep simulated robotic arm. The Leap motion detects hand movements in all directions that will be mapped to the three axis that a robotic arm will move. The controller and simulation software will connect through a python script. This could potentially be used for precise movements for people that do not have the strength, or ability to perform a task using their own arm. 
-
+The Leap Motion controlled Robotic Arm will use the movements of a user's hand to move a Unity simulated robotic arm. The Leap motion detects hand movements in all directions that will be mapped to the three axis that a robotic arm will move. The controller and simulation software will connect through a python script. This could potentially be used for precise movements for people that do not have the strength, or ability to perform a task using their own arm. 
 ##Vision Statement:
 
 Controlling an artificial limb in a natural way.
@@ -21,12 +20,12 @@ Controlling an artificial limb in a natural way.
 This project would solve a problem that does not yet have an easy solution. Users will be able to control a non-natural robotic limb in a very natural way. This project could also be further developed and improved upon later in our college careers to do more and work better.
 
 ##Risks:
-* Being new to working with vrep.
+* Being new to working with Unity.
 * Timeline to finish working project may be too short.
 * Difficulty understanding how to map Leap Motion movements to robotic movements.
 
 ##Risk Mitigation Strategy:
-* Read up on and become familiar with vrep. 
+* Read up on and become familiar with Unity. 
 * Make sure we are communicating well and exchanging schedules.
 * Leap Motion has provided a lot of documentation on how to use their device for projects: https://developer.leapmotion.com/documentation/python/index.html
 
