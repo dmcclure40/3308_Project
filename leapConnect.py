@@ -21,6 +21,7 @@ class Listener(Leap.Listener):
         print "Exited"
 
     def on_frame(self, controller): # Get the most recent frame and report some basic information
+		f=open('handVariables','w')
         frame = controller.frame()
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
@@ -48,7 +49,7 @@ class Listener(Leap.Listener):
             x = hand.palm_position[0]
             y = hand.palm_position[1]
             z = hand.palm_position[2]
-
+			f.write('x: %s\n,y: %s\n,z: %s\n',%(x,y,z))
             normal = hand.palm_normal
             direction = hand.direction
 
@@ -56,9 +57,10 @@ class Listener(Leap.Listener):
             print "X_Pos: " +str(x) + "\tY_Pos: " +str(y) + "\tZ_Pos: " +str(z)
 
             #pitch=rotation around x-axis
-	    #yaw=rotation around y-axis
-	    #roll=rotation around z-axis
+			#yaw=rotation around y-axis
+			#roll=rotation around z-axis
             print "Pitch: " +str(direction.pitch*Leap.RAD_TO_DEG) + "\tYaw: " +str(direction.yaw*Leap.RAD_TO_DEG) + "\tRoll: " +str(normal.roll*Leap.RAD_TO_DEG)
+            f.close()
 
         for gesture in frame.gestures():
         	if gesture.type==Leap.Gesture.TYPE_CIRCLE:
