@@ -21,7 +21,7 @@ class Listener(Leap.Listener):
         print "Exited"
 
     def on_frame(self, controller): # Get the most recent frame and report some basic information
-		f=open('handVariables','w')
+	f=open('handVariables','w')
         frame = controller.frame()
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
@@ -49,7 +49,7 @@ class Listener(Leap.Listener):
             x = hand.palm_position[0]
             y = hand.palm_position[1]
             z = hand.palm_position[2]
-			f.write('x: %s\n,y: %s\n,z: %s\n',%(x,y,z))
+	    f.write('x: %s\ny: %s\nz: %s\ngrip: %s' %(x,y,z, grip))
             normal = hand.palm_normal
             direction = hand.direction
 
