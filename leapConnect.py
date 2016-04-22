@@ -21,7 +21,7 @@ class Listener(Leap.Listener):
         print "Exited"
 
     def on_frame(self, controller): # Get the most recent frame and report some basic information
-	f=open('handVariables','w')
+	f=open('LeapArm/Assets/handVariables','w')
         frame = controller.frame()
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
