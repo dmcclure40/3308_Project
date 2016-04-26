@@ -10,8 +10,15 @@ Group project for CSCI 3308
 
 ##Repository Organization
 * LeapArm/Assets
+  * Unity Implementation
 * _Build
+  * AutoDoc Directory
 * Root
+  * Testing Files (.py / .png)
+  * Documentation Files (.md)
+  * Unity Files (.cs)
+  * LeapMotion Files (.py / .pyc / .dylib / .so)
+  * Variable Handler Files
 
 ##Description:
 
