@@ -8,6 +8,11 @@ Group project for CSCI 3308
 * Nicky Schardt - Ninjahampster611
 * Tyler Lugger - tylu3495
 
+##Repository Organization
+* LeapArm/Assets
+* _Build
+* Root
+
 ##Description:
 
 The Leap Motion controlled Robotic Arm will use the movements of a user's hand to move a Unity simulated robotic arm. The Leap motion detects hand movements in all directions that will be mapped to the three axis that a robotic arm will move. The controller and simulation software will connect through a python script. This could potentially be used for precise movements for people that do not have the strength, or ability to perform a task using their own arm. 
