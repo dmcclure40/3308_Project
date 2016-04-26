@@ -7,27 +7,32 @@
 import os, sys, inspect, thread, time, Leap
 from Leap import CircleGesture
 class Listener(Leap.Listener):
+    ''' Class which listens for device and hand changes. Listener updates once every .1 second.'''
     state_names=['STATE_INVALID', 'STATE_START', 'STATE_UPDATE', 'STATE_END']
 
-    def on_connect(self, controller): # Confirm connection to Leap Motion Controller
+    def on_connect(self, controller):
+        '''Confirm connection to Leap Motion Controller'''
     	controller.enable_gesture(Leap.Gesture.TYPE_CIRCLE)
         print "Connected"
 
 
     def on_disconnect(self, controller):
+        ''' Confirm disconnection from Leap Motion Controller'''
         print "Disconnected"
 
-    def on_exit(self, controller): # Pressing 'enter' will exit script
+    def on_exit(self, controller):
+        ''' Pressing 'enter' will exit script, exit message printed to confirm'''
         print "Exited"
 
-    def on_frame(self, controller): # Get the most recent frame and report some basic information
-	f=open('LeapArm/Assets/handVariables','w')
+    def on_frame(self, controller):
+        '''Get the most recent frame and report some basic information about hand position and gripper open/close'''
+        f=open('LeapArm/Assets/handVariables.txt','w')
         frame = controller.frame()
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d" % (
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers.extended()))
 
-        # Get hands
+        '''Get hands. Listener will pick up between 0 to 2 hands.'''
 
         for hand in frame.hands:
 
@@ -49,18 +54,18 @@ class Listener(Leap.Listener):
             x = hand.palm_position[0]
             y = hand.palm_position[1]
             z = hand.palm_position[2]
-	    f.write('x: %s\ny: %s\nz: %s\ngrip: %s' %(x,y,z, grip))
+            f.write('x: %s\ny: %s\nz: %s\ngrip: %s' %(x,y,z, grip))
+            ''' Write needed arm data to text file for Unity communication'''
             normal = hand.palm_normal
             direction = hand.direction
 
             print "  %s, gripper: %s" %(handType, grip) # Show Left/Right hand and x,y,z position for each frame
             print "X_Pos: " +str(x) + "\tY_Pos: " +str(y) + "\tZ_Pos: " +str(z)
 
-            #pitch=rotation around x-axis
-			#yaw=rotation around y-axis
-			#roll=rotation around z-axis
+            '''pitch=rotation around x-axis
+			yaw=rotation around y-axis
+			roll=rotation around z-axis'''
             print "Pitch: " +str(direction.pitch*Leap.RAD_TO_DEG) + "\tYaw: " +str(direction.yaw*Leap.RAD_TO_DEG) + "\tRoll: " +str(normal.roll*Leap.RAD_TO_DEG)
-            f.close()
 
         for gesture in frame.gestures():
         	if gesture.type==Leap.Gesture.TYPE_CIRCLE:
@@ -77,11 +82,9 @@ class Listener(Leap.Listener):
         		print "ID: " + str(circle.id) + "Swept angle: " +str(swept_angle * Leap.RAD_TO_DEG) + " " + clock
 
 
-    def on_device_change(self, controller):
-	       print "Device change"
-
     def on_device_failure(self, controller):
-	       print "Device failed"
+        '''Detect Leap Motion controller failure'''
+        print "Device failed"
 
 
 def main():
